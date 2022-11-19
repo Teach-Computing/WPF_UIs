@@ -4,12 +4,69 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Login"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
         WindowStyle="None"  WindowStartupLocation="CenterScreen"
         AllowsTransparency="True" Background="Transparent"
         
         Title="MainWindow" Height="500" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
 
+        <Border CornerRadius="30 0 0 30">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0 0" EndPoint="1 1">
+                    <GradientStop Color="#3aa9ad" Offset="0"/>
+                    <GradientStop Color="#3aada1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid>
+                <Canvas >
+                    <Polygon Points="0,20,230,140,0,270" Fill="#4eb1b6"/>
+                    <Polygon Points="100,400,200,370,180,470" Fill="#4eb1b6"/>
+                    <Ellipse Margin="250 450 0 0" Width="40" Height="40" Fill="#4eb1b6"/>
+                    <Ellipse Margin="50 400 0 0" Width="20" Height="20" Fill="#4eb1b6"/>
+                </Canvas>
+
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Sign Up" Style="{StaticResource titleText}"/>
+                    <TextBlock Text="Enter your personal info and create an account to connect us"
+                               Style="{StaticResource normalText}"
+                               Opacity="0.8" Margin="20 30"/>
+                    <Button Content="Sign Up" Style="{StaticResource button}"/>
+                </StackPanel>
+
+            </Grid>
+            
+        </Border>
+
+        <Border Grid.Column="1" Background="#ffffff" CornerRadius="0 30 30 0">
+            <StackPanel Margin="10">
+                <TextBlock Style="{StaticResource titleText}" Foreground="#3ab19b"
+                           Text="Sign Up to APP" HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal"  Margin="10 20"
+                            HorizontalAlignment="Center">
+                    <Button Style="{StaticResource buttonCircle}">
+                        <Icon:PackIconMaterial Kind="Google" 
+                            Style="{StaticResource circleButtonIcon}"/>
+
+                    </Button>
+                    <Button Style="{StaticResource buttonCircle}">
+                        <Icon:PackIconMaterial Kind="Facebook" 
+                             Style="{StaticResource circleButtonIcon}"/>
+
+                    </Button>
+                    <Button Style="{StaticResource buttonCircle}">
+                        <Icon:PackIconMaterial Kind="Linkedin" 
+                            Style="{StaticResource circleButtonIcon}"/>
+
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>
