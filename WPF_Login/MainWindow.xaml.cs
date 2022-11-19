@@ -24,5 +24,54 @@ namespace WPF_Login
         {
             InitializeComponent();
         }
+
+        private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(!string.IsNullOrEmpty(txtEmail.Text) && textEmail.Text.Length > 0 )
+            {
+                textEmail.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                textEmail.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void textEmail_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            txtEmail.Focus();
+        }
+
+
+        private void textPassword_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            txtPassword.Focus();
+        }
+
+        private void txtPassword_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPassword.Text) && txtPassword.Text.Length > 0)
+            {
+                textPassword.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                textPassword.Visibility = Visibility.Visible;
+            }
+
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+        }
+
+        private void PackIconMaterial_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
