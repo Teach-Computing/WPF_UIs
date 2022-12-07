@@ -8,8 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <Button Content="Window 01" Click="Button_Click" Width="200" Margin="20" Padding="10" FontSize="20"/>
-            <Button Content="Window 02" Click="Button_Click_1" Width="200" Margin="20" Padding="10" FontSize="20"/>
+            <Button Content="Element Binding" Click="Button_Click" Width="200" Margin="20" Padding="10" FontSize="20"/>
+            <Button Content="Model Biding" Click="Button_Click_1" Width="200" Margin="20" Padding="10" FontSize="20"/>
+            <Button Content="MVVM Biding" Click="Button_Click_2"  Width="200" Margin="20" Padding="10" FontSize="20"/>
         </StackPanel>
     </Grid>
 </Window>

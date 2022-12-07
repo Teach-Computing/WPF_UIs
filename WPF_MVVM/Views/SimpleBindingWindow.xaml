@@ -7,10 +7,15 @@
         mc:Ignorable="d"
         Title="SimpleBindingWindow" Height="450" Width="800">
     <Grid>
-        <Slider Minimum="0" Maximum="100" Value="50" 
+        <StackPanel>
+            <Slider Minimum="0" Maximum="100" Value="50" 
                 x:Name="slderSize"
                 FontSize="20"/>
-        <TextBlock Text="{Binding ElementName=slderSize,Path=Value}" FontSize="20" Margin="15"
+            <TextBlock Text="{Binding ElementName=slderSize,Path=Value}" FontSize="20" Margin="15"
                    Padding="5"/>
+            <TextBlock Text="Element Binding" FontSize="{Binding
+            ElementName=slderSize,Path=Value}" Margin="20"/>
+        </StackPanel>
+       
     </Grid>
 </Window>

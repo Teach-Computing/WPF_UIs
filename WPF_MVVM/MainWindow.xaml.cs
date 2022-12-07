@@ -34,7 +34,14 @@ namespace WPF_MVVM
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            var window = new ModelBidingWindow();
+            window.Show();
+        }
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var window = new MVVMBindingWindow();
+            window.Show();
         }
     }
 }
